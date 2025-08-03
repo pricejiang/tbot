@@ -48,7 +48,7 @@ app.post('/twilio', async (req, res) => {
     });
     console.log('Echo sent');
   } catch (err) {
-    console.err('Send fail', err);
+    console.error('Send fail', err);
   }
 
 });
