@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "api/twilio.js": { "memory": 512, "maxDuration": 10 }
+  },
+  "routes": [
+    { "src": "/twilio", "dest": "api/twilio.js" }
+  ]
+}
