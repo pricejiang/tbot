@@ -1,0 +1,85 @@
+# ---------- GENERAL ----------
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.log
+
+# Env & secrets
+.env
+.env.*
+*.local
+*.secret
+firebaseServiceAccount*.json
+
+# Build / cache
+dist/
+build/
+coverage/
+*.coverage
+.cache/
+tmp/
+temp/
+
+# ---------- NODE ----------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# ---------- PYTHON (if any helper scripts) ----------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+env/
+venv/
+
+# ---------- FIREBASE ----------
+.firebaserc
+.firebase/
+firebase-debug.log*
+firestore.indexes.json
+firestore.rules
+storage.rules
+
+# Cloud Functions build artifacts
+functions/lib/
+functions/.env
+functions/node_modules/
+functions/package-lock.json
+
+# ---------- VERCEL / RENDER ----------
+.vercel/
+.output/
+.render-build/
+
+# ---------- SUPABASE / LOCAL DB ----------
+supabase/.temp/
+.supabase/
+
+# ---------- TEST / COVERAGE ----------
+coverage/
+.nyc_output/
+reports/
+
+# ---------- DOCUMENTATION OUTPUT ----------
+*.pdf
+*.xlsx
+*.pptx
+
+# ---------- IMAGES & DESIGN TEMP ----------
+design/*.psd
+design/*.ai
+screenshots/raw/
+
+# ---------- BACKUP ----------
+*.bak
+*.tmp
+~$*
