@@ -31,7 +31,7 @@ app.post('/twilio', async (req, res) => {
     return res.status(403).send('invalid signature');
   }
 
-  res.status(200).send('ACK') // respond immediately
+  res.status(200).send() // respond immediately
 
   // Get incoming message
   const inboundText = req.body.Body || '';  // Sender text
