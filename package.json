@@ -2,9 +2,10 @@
   "name": "tbot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "api/twilio.js",
   "scripts": {
-    "dev": "node index.js"
+    "start": "node api/twilio.js",
+    "dev":   "nodemon api/twilio.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "nodemon": "^3.1.10",
+    "openai": "^5.11.0",
     "twilio": "^5.8.0"
   }
 }
