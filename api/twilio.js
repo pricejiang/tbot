@@ -33,8 +33,6 @@ app.post('/twilio', async (req, res) => {
     return res.status(403).send('invalid signature');
   }
 
-  res.status(200).send() // respond immediately
-
   // Get incoming message
   const inboundText = req.body.Body || '';  // Sender text
   const toPhone = req.body.From;            // Sender number
@@ -44,13 +42,15 @@ app.post('/twilio', async (req, res) => {
   // Send reply
   try {
     await client.messages.create({
-      from: process.env.TWILIO_WHATSAPP_NUMBER, // 你的 Sandbox 号码
+      from: process.env.TWILIO_WHATSAPP_NUMBER,
       to: toPhone,
-      body: `[Echo] ${inboundText}`             // 原文加标签发回
+      body: `[Echo] ${inboundText}`
     });
     console.log('Echo sent');
-  } catch (err) {
-    console.error('Send fail', err);
+    return res.status(200).send();      // ★ 最后再回应 Vercel
+  } catch (e) {
+    console.error('Send fail', e);
+    return res.status(500).send();
   }
 
 });
